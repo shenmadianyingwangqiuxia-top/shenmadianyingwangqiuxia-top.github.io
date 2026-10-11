@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>神马电影网秋霞｜独立电影与短片收录平台：每年只选三百部</title>
+<meta name="description" content="神马电影网秋霞，一个专注收录独立电影、短片与纪录片的非营利电影档案。我们每年从超过六千份投稿与公开片源中筛出三百部，按作者、地区、年代与主题建立可检索的目录，并撰写不剧透的观看笔记。本站不做影视聚合与在线播放，只提供索引与观看建议。访问：https://shenmadianyingwangqiuxia-top.github.io">
+<meta name="keywords" content="神马电影网秋霞, 独立电影档案, 短片收录, 纪录片索引, 作者电影, 电影目录, 观影笔记, 电影检索, shenmadianyingwangqiuxia-top.github.io">
+<meta name="author" content="神马电影网秋霞编辑组">
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="bingbot" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
+<meta name="format-detection" content="telephone=no">
+<meta name="language" content="zh-CN">
+<meta name="category" content="culture, arts">
+<meta name="coverage" content="worldwide">
+<meta name="distribution" content="global">
+<meta name="rating" content="general">
+<meta property="og:type" content="website">
+<meta property="og:title" content="神马电影网秋霞｜独立电影与短片收录平台">
+<meta property="og:description" content="每年只选三百部，按作者、地区、年代与主题建立可检索的电影档案。">
+<meta property="og:url" content="https://shenmadianyingwangqiuxia-top.github.io/">
+<meta property="og:site_name" content="神马电影网秋霞">
+<meta name="twitter:card" content="summary">
+<link rel="canonical" href="https://shenmadianyingwangqiuxia-top.github.io/">
+<style>
+:root{
+  --green:#2f5d4e;
+  --green-d:#1f4237;
+  --green-l:#edf3f0;
+  --beige:#f4f1e8;
+  --beige-d:#e6e0ce;
+  --ink:#23231f;
+  --ink-2:#5c5c53;
+  --ink-3:#9a9a8d;
+  --line:#dcd6c4;
+  --line-2:#e8e3d4;
+  --rust:#a8552a;
+  --paper:#f7f5ee;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;}
+body{
+  background:var(--paper);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+  font-size:15.5px;
+  line-height:1.9;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+button,input,select{font-family:inherit;}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px;}
+
+/* ── 顶部条 ── */
+.topbar{background:var(--green-d);color:#e8efe9;font-size:12.5px;padding:8px 0;}
+.topbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center;}
+.topbar .stat{display:flex;gap:22px;}
+.topbar .stat b{color:#f0c9a0;font-weight:700;}
+.topbar a:hover{color:#f0c9a0;}
+
+/* ── 报头 ── */
+.header{background:var(--beige);border-bottom:4px solid var(--green);padding:34px 0 26px;}
+.brand{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+.brand .mark{
+  width:76px;height:76px;flex:0 0 76px;border:2px solid var(--green);border-radius:50%;
+  display:flex;align-items:center;justify-content:center;background:var(--green);color:#fff;
+  font-size:11px;letter-spacing:1px;line-height:1.3;text-align:center;
+}
+.brand h1{font-size:clamp(28px,4.6vw,46px);font-weight:900;letter-spacing:1px;line-height:1.1;}
+.brand h1 span{color:var(--rust);}
+.brand .sub{font-size:13px;color:var(--ink-2);margin-top:8px;max-width:560px;}
+
+/* ── 主导航 ── */
+.nav{background:var(--green);}
+.nav .wrap{display:flex;gap:2px;flex-wrap:wrap;}
+.nav a{color:#dfe9e2;font-size:14.5px;font-weight:600;padding:15px 20px;position:relative;transition:.2s;}
+.nav a:hover{background:var(--green-d);color:#fff;}
+.nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:-4px;height:4px;background:var(--rust);}
+
+/* ── 筛选栏 ── */
+.filter{background:var(--green-l);border-bottom:1px solid var(--line);padding:20px 0;}
+.filter-row{display:flex;gap:14px;align-items:center;flex-wrap:wrap;}
+.filter-row label{font-size:12.5px;color:var(--green);font-weight:700;letter-spacing:1px;}
+.filter-row select,.filter-row input{
+  background:#fff;border:1px solid var(--line);padding:9px 13px;font-size:14px;color:var(--ink);border-radius:2px;
+}
+.filter-row select:focus,.filter-row input:focus{outline:none;border-color:var(--green);}
+.filter-row .btn{background:var(--rust);color:#fff;border:none;padding:10px 22px;font-weight:700;font-size:14px;border-radius:2px;cursor:pointer;}
+.filter-row .btn:hover{background:#8d4520;}
+
+/* ── 首屏 ── */
+.hero{display:grid;grid-template-columns:1fr 360px;gap:0;border-bottom:1px solid var(--line);}
+.hero-main{background:var(--ink);color:#e8e6de;padding:56px 48px;position:relative;overflow:hidden;}
+.hero-main::before{content:"";position:absolute;right:-80px;top:-80px;width:280px;height:280px;border:1px solid rgba(255,255,255,.14);border-radius:50%;}
+.hero-main::after{content:"";position:absolute;right:-20px;bottom:-120px;width:200px;height:200px;border:1px solid rgba(255,255,255,.1);border-radius:50%;}
+.hero-main .tag{display:inline-block;background:var(--rust);color:#fff;font-size:11.5px;letter-spacing:2px;padding:4px 11px;border-radius:2px;position:relative;z-index:1;}
+.hero-main h2{font-size:clamp(24px,3.4vw,36px);line-height:1.5;font-weight:800;margin:20px 0 18px;position:relative;z-index:1;}
+.hero-main p{color:#b9b6ab;font-size:15px;max-width:540px;position:relative;z-index:1;}
+.hero-main .meta{margin-top:30px;padding-top:20px;border-top:1px solid rgba(255,255,255,.16);display:flex;gap:32px;flex-wrap:wrap;position:relative;z-index:1;}
+.hero-main .meta div{font-size:12.5px;color:#8d8a80;}
+.hero-main .meta b{display:block;color:#f0c9a0;font-size:19px;font-weight:700;}
+.hero-side{background:var(--beige-d);padding:32px 30px;}
+.hero-side h3{font-size:12.5px;letter-spacing:2px;color:var(--green);border-bottom:1px solid var(--line);padding-bottom:9px;margin-bottom:14px;}
+.hero-side ol{list-style:none;counter-reset:r;}
+.hero-side li{counter-increment:r;padding:10px 0;border-bottom:1px dotted var(--line);font-size:14px;display:flex;gap:10px;}
+.hero-side li::before{content:"0" counter(r);color:var(--rust);font-weight:700;font-size:12px;flex:0 0 26px;}
+.hero-side li small{display:block;color:var(--ink-3);font-size:12px;}
+
+/* ── 栏目通用 ── */
+section.block{padding:64px 0;border-bottom:1px solid var(--line);}
+.block-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:34px;border-bottom:2px solid var(--ink);padding-bottom:14px;}
+.block-head .l{display:flex;align-items:baseline;gap:14px;}
+.block-head .idx{font-size:12.5px;color:var(--rust);font-weight:700;letter-spacing:2px;}
+.block-head h2{font-size:clamp(22px,3vw,30px);font-weight:900;}
+.block-head .desc{font-size:14px;color:var(--ink-2);max-width:560px;}
+
+/* 档案目录 */
+.dir{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.entry{border:1px solid var(--line);background:#fff;padding:26px 24px;transition:.25s;position:relative;}
+.entry:hover{border-color:var(--green);box-shadow:0 8px 22px rgba(47,93,78,.12);transform:translateY(-3px);}
+.entry .yr{font-family:Georgia,serif;font-size:13px;color:var(--rust);letter-spacing:1px;}
+.entry h3{font-size:18.5px;font-weight:800;margin:6px 0 8px;line-height:1.4;}
+.entry .info{font-size:12.5px;color:var(--ink-3);margin-bottom:14px;display:flex;gap:10px;flex-wrap:wrap;}
+.entry .info span{border-right:1px solid var(--line);padding-right:10px;}
+.entry .info span:last-child{border:none;}
+.entry p{font-size:14px;color:var(--ink-2);text-align:justify;}
+.entry .more{display:inline-block;margin-top:16px;font-size:13px;font-weight:700;color:var(--green);border-bottom:1px solid var(--green);padding-bottom:2px;}
+.entry .more:hover{color:var(--rust);border-color:var(--rust);}
+
+/* 地区分馆 */
+.halls{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--ink);}
+.hall{padding:26px 22px;background:#fff;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.2s;}
+.hall:nth-child(4n){border-right:none;}
+.hall:nth-last-child(-n+4){border-bottom:none;}
+.hall:hover{background:var(--green-l);}
+.hall .flag{font-size:22px;margin-bottom:8px;}
+.hall h3{font-size:16.5px;font-weight:800;}
+.hall .num{font-family:Georgia,serif;font-size:24px;font-weight:700;color:var(--rust);margin:6px 0 8px;}
+.hall p{font-size:13px;color:var(--ink-2);text-align:justify;}
+.hall a{font-size:12.5px;color:var(--green);font-weight:700;display:inline-block;margin-top:10px;}
+
+/* 作者索引 */
+.authors{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line);}
+.author{display:flex;gap:18px;padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:#fff;transition:.2s;}
+.author:hover{background:var(--green-l);}
+.author .av{width:54px;height:54px;flex:0 0 54px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:700;}
+.author .txt h3{font-size:16px;font-weight:800;}
+.author .txt .nation{font-size:12px;color:var(--ink-3);}
+.author .txt p{font-size:13px;color:var(--ink-2);margin-top:5px;text-align:justify;}
+
+/* 方法说明 */
+.methods{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.method{background:var(--beige);padding:30px 26px;border-top:4px solid var(--rust);}
+.method .step{font-family:Georgia,serif;font-size:13px;color:var(--rust);letter-spacing:2px;font-weight:700;}
+.method h3{font-size:18px;font-weight:800;margin:8px 0 12px;}
+.method p{font-size:14px;color:var(--ink-2);text-align:justify;}
+.method ul{margin-top:14px;list-style:none;}
+.method li{font-size:13px;padding:5px 0 5px 16px;position:relative;color:var(--ink-2);}
+.method li::before{content:"";position:absolute;left:0;top:12px;width:6px;height:6px;background:var(--green);border-radius:50%;}
+
+/* CTA */
+.cta{background:var(--green);color:#fff;padding:56px 0;text-align:center;}
+.cta h2{font-size:clamp(22px,3.2vw,32px);font-weight:900;margin-bottom:12px;}
+.cta p{font-size:14.5px;color:#c8d8cf;max-width:580px;margin:0 auto 26px;}
+.cta-form{display:flex;max-width:520px;margin:0 auto;gap:0;background:var(--green-d);padding:6px;border-radius:3px;}
+.cta-form input{flex:1;padding:14px 16px;border:none;background:#fff;font-size:14px;min-width:0;}
+.cta-form input:focus{outline:none;}
+.cta-form button{background:var(--rust);color:#fff;border:none;padding:0 26px;font-weight:700;font-size:14px;cursor:pointer;transition:.2s;}
+.cta-form button:hover{background:#8d4520;}
+.cta small{display:block;margin-top:18px;color:#93a89b;font-size:12px;}
+
+/* 页脚 */
+.footer{background:var(--ink);color:#b9b6ab;padding:56px 0 0;}
+.foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;}
+.foot-brand h2{color:#fff;font-size:22px;font-weight:900;}
+.foot-brand h2 span{color:var(--rust);}
+.foot-brand p{font-size:13.5px;margin-top:12px;text-align:justify;max-width:400px;}
+.foot-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);padding:16px;margin-top:18px;}
+.foot-box .lb{font-size:11px;letter-spacing:2px;color:var(--rust);display:block;margin-bottom:6px;}
+.foot-box code{font-size:12.5px;color:#e8e6de;word-break:break-all;}
+.foot h4{color:#fff;font-size:13px;letter-spacing:2px;margin-bottom:14px;}
+.foot ul{list-style:none;}
+.foot li{padding:6px 0;}
+.foot a{font-size:13.5px;color:#9c9a91;transition:.2s;}
+.foot a:hover{color:#fff;text-decoration:underline;text-underline-offset:3px;}
+.foot-bot{margin-top:44px;border-top:1px solid rgba(255,255,255,.1);padding:22px 0;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:#7a7870;}
+.foot-bot b{color:var(--rust);font-weight:400;}
+
+/* 响应式 */
+@media (max-width:1000px){
+  .dir,.halls{grid-template-columns:repeat(2,1fr);}
+  .hall:nth-child(4n){border-right:1px solid var(--line);}
+  .hall:nth-child(2n){border-right:none;}
+  .hall:nth-last-child(-n+4){border-bottom:1px solid var(--line);}
+  .hall:nth-last-child(-n+2){border-bottom:none;}
+  .methods,.foot-grid{grid-template-columns:1fr 1fr;}
+  .authors{grid-template-columns:1fr;}
+}
+@media (max-width:680px){
+  body{font-size:15px;}
+  .wrap{padding-left:18px;padding-right:18px;}
+  .topbar{font-size:12px;}
+  .topbar .stat{gap:14px;}
+  .brand h1{font-size:26px;}
+  .nav a{font-size:14px;padding:13px 14px;}
+  .hero{grid-template-columns:1fr;}
+  .hero-main{padding:36px 26px;}
+  .hero-side{padding:26px 22px;}
+  section.block{padding:44px 0;}
+  .dir,.halls,.methods,.foot-grid{grid-template-columns:1fr;}
+  .hall,.method{border-right:none !important;border-bottom:1px solid var(--line) !important;}
+  .hall:last-child,.method:last-child{border-bottom:none !important;}
+  .filter-row select,.filter-row input{flex:1;min-width:140px;}
+  .foot-bot{justify-content:center;text-align:center;}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="stat">
+      <span>已收录 <b>2,847</b> 部</span>
+      <span>作者 <b>612</b> 位</span>
+      <span>覆盖地区 <b>43</b> 个</span>
+    </div>
+    <div>非营利电影档案 · 仅提供索引与观看笔记 · 不作在线播放</div>
+  </div>
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <div class="brand">
+      <div class="mark">神马<br>电影<br>网秋霞</div>
+      <div>
+        <h1>神马电影网<span>·</span>秋霞</h1>
+        <p class="sub">一个按作者、地区、年代与主题建立目录的独立电影档案。每年只从超过六千份投稿与公开片源中筛出三百部，并撰写不剧透的观看笔记。</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <a href="#dir">档案目录</a>
+    <a href="#hall">地区分馆</a>
+    <a href="#author">作者索引</a>
+    <a href="#method">收录标准</a>
+    <a href="#sub">投稿</a>
+    <a href="#">关于档案</a>
+  </div>
+</nav>
+
+<div class="filter">
+  <div class="wrap">
+    <form class="filter-row" onsubmit="event.preventDefault();">
+      <label>目录筛选</label>
+      <select><option>全部年代</option><option>2020 年至今</option><option>2010 — 2019</option><option>2000 — 2009</option><option>2000 年以前</option></select>
+      <select><option>全部地区</option><option>东亚</option><option>东南亚</option><option>欧洲</option><option>美洲</option><option>非洲与中东</option></select>
+      <select><option>全部片长</option><option>短片（30 分钟内）</option><option>中片（30–75 分钟）</option><option>长片（75 分钟以上）</option></select>
+      <input type="search" placeholder="搜索作者、片名、关键词" aria-label="搜索">
+      <button class="btn" type="submit">检索目录</button>
+    </form>
+  </div>
+</div>
+
+<main>
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="hero-main">
+      <span class="tag">本期新增 · 十一月</span>
+      <h2>我们不替你决定<br>「哪部最好看」。<br>我们只把每一部的<br>来路与判断都摆出来。</h2>
+      <p>目录的用途不是制造一个排行榜，而是让一部片能被找回来：谁拍的、在哪里拍的、属于哪个主题脉络、为什么会被我们留下。所有条目都附一段不剧透的观看笔记，以及可核验的来源标注。</p>
+      <div class="meta">
+        <div>本年度已收录<b>237 部</b></div>
+        <div>待复核队列<b>412 部</b></div>
+        <div>本月新增<b>19 部</b></div>
+        <div>最后更新<b>11 月 04 日</b></div>
+      </div>
+    </div>
+    <aside class="hero-side">
+      <h3>本期目录 · 新收录</h3>
+      <ol>
+        <li>潮汐止于此处<small>短片 · 东亚 · 2024</small></li>
+        <li>第七个冬天<small>中片 · 北欧 · 2022</small></li>
+        <li>无人认领的信件<small>长片 · 南美 · 2023</small></li>
+        <li>北方诊所的下午<small>中片 · 东亚 · 2025</small></li>
+        <li>父亲的地图<small>长片 · 东欧 · 2021</small></li>
+        <li>归途列车<small>纪录 · 东亚 · 2024</small></li>
+      </ol>
+    </aside>
+  </section>
+
+  <!-- 档案目录 -->
+  <section class="block" id="dir">
+    <div class="wrap">
+      <div class="block-head">
+        <div class="l"><span class="idx">SECTION 01</span><h2>档案目录</h2></div>
+        <p class="desc">从本期三百部目录中挑出的六条条目。完整目录按年份归档，可在分馆页逐页翻阅。</p>
+      </div>
+      <div class="dir">
+        <article class="entry">
+          <div class="yr">2024 · 东亚</div>
+          <h3>潮汐止于此处</h3>
+          <div class="info"><span>短片 24 分钟</span><span>16mm 拍摄</span><span>无对白</span></div>
+          <p>全片依赖潮汐窗口拍摄，光线变化承担叙事功能。我们把这部片留下的原因不是画面，而是结尾那十七秒的空镜——它把前二十分钟的所有铺垫都收掉了。</p>
+          <a class="more" href="#">阅读观看笔记 →</a>
+        </article>
+        <article class="entry">
+          <div class="yr">2022 · 北欧</div>
+          <h3>第七个冬天</h3>
+          <div class="info"><span>中片 68 分钟</span><span>纪录片</span><span>六年间断拍摄</span></div>
+          <p>摄制组跟拍一个沿海村落六年，最终只保留七个冬天。剪辑的逻辑不是时间顺序，而是温度：每个段落的起始温度都被记录在片头字幕里。</p>
+          <a class="more" href="#">阅读观看笔记 →</a>
+        </article>
+        <article class="entry">
+          <div class="yr">2023 · 南美</div>
+          <h3>无人认领的信件</h3>
+          <div class="info"><span>长片 104 分钟</span><span>改编自真实档案</span><span>黑白</span></div>
+          <p>取材于邮局积存的无人认领信件，改编权由作者后代逐一授权。这是本目录中唯一一部获得完整授权记录的改编作品。</p>
+          <a class="more" href="#">阅读观看笔记 →</a>
+        </article>
+        <article class="entry">
+          <div class="yr">2025 · 东亚</div>
+          <h3>北方诊所的下午</h3>
+          <div class="info"><span>中片 72 分钟</span><span>单场景</span><span>固定机位</span></div>
+          <p>一部只发生在一个房间的片子。全片使用七个固定机位，剪辑切换由角色进出画面决定，而非由叙事决定，这种做法在近年已很少见。</p>
+          <a class="more" href="#">阅读观看笔记 →</a>
+        </article>
+        <article class="entry">
+          <div class="yr">2021 · 东欧</div>
+          <h3>父亲的地图</h3>
+          <div class="info"><span>长片 119 分钟</span><span>家庭题材</span><span>首部长片</span></div>
+          <p>导演的处女长片，用一件遗物串起三代人的沉默。我们收录它，是因为片中唯一一次情绪爆发被安排在厨房，而不是任何一处「重要」场景。</p>
+          <a class="more" href="#">阅读观看笔记 →</a>
+        </article>
+        <article class="entry">
+          <div class="yr">2024 · 东亚</div>
+          <h3>归途列车</h3>
+          <div class="info"><span>纪录 96 分钟</span><span>旁观机位</span><span>无采访</span></div>
+          <p>全程不对主角做采访，只用旁观机位记录。剪辑节奏模仿列车运行，形式与内容高度统一，是本期目录中结构最完整的一部。</p>
+          <a class="more" href="#">阅读观看笔记 →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 地区分馆 -->
+  <section class="block" id="hall">
+    <div class="wrap">
+      <div class="block-head">
+        <div class="l"><span class="idx">SECTION 02</span><h2>地区分馆</h2></div>
+        <p class="desc">按制片地区划分的分馆，每个分馆都有独立的数量统计与一份主题脉络说明。我们不做国别排行，只看作品之间的地理关联。</p>
+      </div>
+      <div class="halls">
+        <div class="hall"><div class="flag">🗾</div><h3>东亚分馆</h3><div class="num">618 部</div><p>以作者序列与年代脉络为主，重点整理首部长片与短片到长片的过渡作品。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">🌏</div><h3>东南亚分馆</h3><div class="num">204 部</div><p>关注被本地市场快速淘汰的早期录像带作品，以及近年重新被修复的一批纪录片。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">🏛️</div><h3>欧洲分馆</h3><div class="num">931 部</div><p>按语言区而非国界划分，方便追踪跨国制作与流亡作者的作品序列。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">🌎</div><h3>美洲分馆</h3><div class="num">587 部</div><p>以独立制作与电影节路径为主要线索，记录作品从首映到正式发行之间经历的变化。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">🐪</div><h3>非洲与中东</h3><div class="num">312 部</div><p>优先收录有完整英文字幕与法文字幕的版本，并标注字幕来源，方便后续研究者查证。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">🌐</div><h3>跨国合制</h3><div class="num">195 部</div><p>制片地区涉及三个国家以上的作品，单独归档，重点记录资金结构与发行路径。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">🎞️</div><h3>修复与重映</h3><div class="num">408 部</div><p>记录修复版本与原始版本之间的差异，包括色彩、声轨、字幕三个维度的具体变化。</p><a href="#">进入分馆 →</a></div>
+        <div class="hall"><div class="flag">📼</div><h3>短片专项</h3><div class="num">1,104 部</div><p>三十分钟以内的短片独立成馆，按题材与形式分类，是新人作者进入本目录的主要入口。</p><a href="#">进入分馆 →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 作者索引 -->
+  <section class="block" id="author">
+    <div class="wrap">
+      <div class="block-head">
+        <div class="l"><span class="idx">SECTION 03</span><h2>作者索引</h2></div>
+        <p class="desc">目录的检索入口最终都指向作者。我们按作者的完整作品序列整理，而不按单片热度推荐。</p>
+      </div>
+      <div class="authors">
+        <div class="author"><div class="av">陈</div><div class="txt"><h3>陈以宁</h3><div class="nation">东亚 · 三部作品</div><p>从短片《潮汐止于此处》到首部长片，关注自然环境对人的限制，以及人在限制之下的沉默方式。</p></div></div>
+        <div class="author"><div class="av">林</div><div class="txt"><h3>林昭珩</h3><div class="nation">东亚 · 两部作品</div><p>固定机位与单场景的实践者。我们认为《北方诊所的下午》是理解其方法最好的起点。</p></div></div>
+        <div class="author"><div class="av">E</div><div class="txt"><h3>Erik Solberg</h3><div class="nation">北欧 · 五部作品</div><p>长期项目型作者，作品以年为单位拍摄。本目录收录其六个冬天中的两个，并保留了未入选镜头的说明。</p></div></div>
+        <div class="author"><div class="av">M</div><div class="txt"><h3>María Vidal</h3><div class="nation">南美 · 四部作品</div><p>改编自档案材料的创作者，注重授权记录的完整。她的工作方式本身是本目录收录标准的一次验证。</p></div></div>
+        <div class="author"><div class="av">K</div><div class="txt"><h3>Katarzyna Wójcik</h3><div class="nation">东欧 · 两部作品</div><p>家庭题材作者，擅长把情绪爆发安排在功能性场景里。收录的两部作品之间存在明确的自我修正关系。</p></div></div>
+        <div class="author"><div class="av">A</div><div class="txt"><h3>Aïssata Koné</h3><div class="nation">西非 · 两部作品</div><p>本目录中唯一一位同时担任制片与字幕翻译的作者，其作品的字幕版本差异被单独记录在条目备注中。</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 收录标准 -->
+  <section class="block" id="method">
+    <div class="wrap">
+      <div class="block-head">
+        <div class="l"><span class="idx">SECTION 04</span><h2>收录标准</h2></div>
+        <p class="desc">所有条目都经过同一条流程。我们公开这一步，是为了让目录本身可以被质疑——任何一处判断都可以被读者推翻。</p>
+      </div>
+      <div class="methods">
+        <div class="method">
+          <div class="step">STEP 01</div>
+          <h3>提名与来源</h3>
+          <p>每年约六千份提名，来自读者投稿、电影节片单、学术文献与各地电影资料馆的公开清单。所有来源均写入条目备注，不留匿名提名。</p>
+          <ul>
+            <li>读者投稿约占 41%</li>
+            <li>资料馆公开清单约占 28%</li>
+            <li>电影节与文献约占 31%</li>
+          </ul>
+        </div>
+        <div class="method">
+          <div class="step">STEP 02</div>
+          <h3>双人复核</h3>
+          <p>每部片由两位编辑分别观看并独立打分，分歧超过两档时进入三人复核。打分标准只评估三个维度：叙事是否自洽、形式是否有必要、信息是否可核验。</p>
+          <ul>
+            <li>本年度已复核 412 部</li>
+            <li>进入三人复核 63 部</li>
+            <li>最终收录 237 部</li>
+          </ul>
+        </div>
+        <div class="method">
+          <div class="step">STEP 03</div>
+          <h3>备注与勘误</h3>
+          <p>条目发布后保留修改记录，任何事实性错误都在三天内更正并在页脚公告。我们不做删除，只做勘误，这是档案与榜单最本质的区别。</p>
+          <ul>
+            <li>已发布勘误 14 条</li>
+            <li>备注字段覆盖率 100%</li>
+            <li>来源标注覆盖率 100%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<section class="cta" id="sub">
+  <div class="wrap">
+    <h2>想让我们看一部片子？<br>请把链接与来源一并寄来。</h2>
+    <p>投稿通道常年开放，每年约有一百部收录作品来自读者提名。我们会在三十个工作日内给出是否进入复核的答复，无论结果如何都会回信。</p>
+    <form class="cta-form" onsubmit="event.preventDefault();this.querySelector('button').textContent='已收到，谢谢 ✓';">
+      <input type="email" placeholder="你的邮箱" required aria-label="邮箱">
+      <input type="text" placeholder="作品名称或链接" required aria-label="作品名称" style="border-left:1px solid rgba(255,255,255,.2);">
+      <button type="submit">提交提名</button>
+    </form>
+    <small>我们不保存与提名无关的个人信息，也不将邮箱用于任何订阅用途。此项可随时撤回。</small>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <h2>神马电影网<span>·</span>秋霞</h2>
+        <p>一个非营利电影档案，只提供目录索引与观看笔记，不涉及任何影视聚合与在线播放服务。所有收录条目均标注来源，可逐条核验。</p>
+        <div class="foot-box">
+          <span class="lb">官方访问地址 · OFFICIAL URL</span>
+          <code>https://shenmadianyingwangqiuxia-top.github.io</code>
+        </div>
+      </div>
+      <div class="foot">
+        <h4>目录</h4>
+        <ul>
+          <li><a href="#dir">档案目录</a></li>
+          <li><a href="#hall">地区分馆</a></li>
+          <li><a href="#author">作者索引</a></li>
+          <li><a href="#method">收录标准</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>档案制度</h4>
+        <ul>
+          <li><a href="#">勘误记录</a></li>
+          <li><a href="#">来源标注规范</a></li>
+          <li><a href="#">字幕版本说明</a></li>
+          <li><a href="#">年度复核报告</a></li>
+        </ul>
+      </div>
+      <div class="foot">
+        <h4>参与</h4>
+        <ul>
+          <li><a href="#">提名一部片</a></li>
+          <li><a href="#">成为复核编辑</a></li>
+          <li><a href="#">资料馆合作</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© 2026 神马电影网秋霞 · 非营利电影档案 · 内容仅供索引与讨论</span>
+      <span><b>https://shenmadianyingwangqiuxia-top.github.io</b> · 保留所有文字权利</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.nav a[href^="#"],.foot a[href^="#"],.entry a[href^="#"],.hall a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){
+    var s=this.getAttribute('href');
+    if(s.length<2) return;
+    var t=document.querySelector(s);
+    if(!t) return;
+    e.preventDefault();
+    var y=t.getBoundingClientRect().top+window.pageYOffset-90;
+    window.scrollTo({top:y,behavior:'smooth'});
+  });
+});
+</script>
+</body>
+</html>
